@@ -8,6 +8,7 @@ import network.freeTopic.domain.enums.PostOpenPermission;
 @DiscriminatorValue("P")
 @Getter
 @Setter
+@Entity
 public class ClubPost extends Post{
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "club_id")

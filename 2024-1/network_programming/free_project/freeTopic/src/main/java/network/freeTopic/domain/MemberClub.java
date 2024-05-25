@@ -3,6 +3,7 @@ package network.freeTopic.domain;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import network.freeTopic.domain.enums.ClubRole;
 
 @Entity
 @Getter
@@ -19,5 +20,9 @@ public class MemberClub extends BaseEntity{
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "club_id")
     private Club club;
+
+    @Enumerated
+    @Column(name = "role")
+    private ClubRole clubRole;
 
 }
