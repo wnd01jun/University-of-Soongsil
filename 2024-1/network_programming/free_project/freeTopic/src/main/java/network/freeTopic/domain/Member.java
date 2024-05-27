@@ -3,12 +3,16 @@ package network.freeTopic.domain;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import lombok.AccessLevel;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+import network.freeTopic.form.RegisterForm;
 
 @Entity
 @Getter
 @Setter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Member extends BaseEntity{
     @GeneratedValue
     @Id
@@ -20,4 +24,11 @@ public class Member extends BaseEntity{
     private String studentId;
     private String password;
 
+    public Member(RegisterForm form, String password) {
+        this.name = form.getName();
+        this.role = form.getRole();
+        this.major = form.getMajor();
+        this.studentId = form.getStudentId();
+        this.password = password;
+    }
 }
