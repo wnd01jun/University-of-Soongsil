@@ -16,4 +16,8 @@ public class Post extends BaseEntity{
 
     private String title;
     private String textDetail;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "poster")
+    private Member member;
 }
