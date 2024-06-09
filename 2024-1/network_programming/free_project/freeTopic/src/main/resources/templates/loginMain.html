@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>메인 페이지</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+
+<div class="container" th:object ="${member}">
+
+    <div />
+
+    <div class="jumbotron">
+        <h1>선택 화면</h1>
+        <p><div class="lead" th:text="*{name}"></div>님 어서오세요!</p>
+        <p>
+            <a href="/login">게시판 이동</a>
+            <a href="/logout">로그아웃</a>
+        </p>
+    </div>
+
+    <div>
+
+    </div> <!-- /container -->
+
+</body>
+</html>

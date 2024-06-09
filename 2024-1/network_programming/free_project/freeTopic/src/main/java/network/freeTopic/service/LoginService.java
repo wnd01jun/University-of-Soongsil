@@ -17,6 +17,7 @@ public class LoginService {
 
     public Member login(String loginId, String password){
         Member member = memberRepository.findByStudentId(loginId);
+        if(member == null) return null;
         if(passwordEncoder.matches(password, member.getPassword())){
             return member;
         }

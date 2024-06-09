@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .container {
+            max-width: 560px;
+        }
+        .field-error{
+            border-color : #dc3545;
+            color : #dc3545;
+        }
+    </style>
+    <title>회원가입 폼</title>
+</head>
+<body>
+<div class = "container">
+<div class="signup-form">
+    <h2>회원가입</h2>
+    <form action="/signup" th:action="@{/sign-up}" th:object="${form}" method="POST">
+
+        <div th:if="${#fields.hasGlobalErrors()}">
+            <p class="field-error" th:each="err : ${#fields.hasGlobalErrors()}"
+               th:text="${err}">글로벌 오류 메시지</p>
+        </div>
+
+        <label for="name">이름</label>
+        <input type="text" id="name" th:field="*{name}" name="name" required>
+        <br>
+
+        <label for="major">학과</label>
+        <input type="text" id="major" th:field="*{major}" name="major" required
+               th:errorclass="field-error" class = "form-control"
+               placeholder="학과 입력은 필수입니다.">
+        <div class = "field_error" th:errors="*{major}"> 학과 오류</div>
+        <br>
+
+        <label for="studentId">학번</label>
+        <input type="text" id="studentId" th:field="*{studentId}" name="studentId" required
+        th:errorclass="field-error" class = "form-control"
+        placeholder="학번은 8자리 입니다.">
+        <div class = "field-error" th:errors="*{studentId}"> 학번 오류</div>
+        <br>
+
+        <label for="password">비밀번호</label>
+        <input type="password" id="password" th:field="*{password}" name="password" required
+               th:errorclass="field-error" class = "form-control"
+               placeholder="비밀번호는 6자리 이상, 15자리 이하입니다..">
+        <div class ="field-error" th:errors="*{password}"> 비밀번호 자리 오류</div>
+        <br>
+
+        <button type="submit">회원가입</button>
+    </form>
+</div>
+<!--</div>-->
+</body>
+</html>
