@@ -20,4 +20,6 @@ public class Post extends BaseEntity{
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "poster")
     private Member member;
+
+
 }

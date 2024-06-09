@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 import network.freeTopic.domain.enums.PostOpenPermission;
 
-@DiscriminatorValue("P")
+@DiscriminatorValue("C")
 @Getter
 @Setter
 @Entity

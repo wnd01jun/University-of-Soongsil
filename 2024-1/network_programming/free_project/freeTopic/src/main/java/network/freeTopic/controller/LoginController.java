@@ -67,6 +67,6 @@ public class LoginController {
             bindingResult.reject("duplicate");
             return "/register";
         }
-
+        return "redirect:/";
     }
 }

@@ -12,7 +12,7 @@ import network.freeTopic.form.RegisterForm;
 @Entity
 @Getter
 @Setter
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor
 public class Member extends BaseEntity{
     @GeneratedValue
     @Id
@@ -30,5 +30,9 @@ public class Member extends BaseEntity{
         this.major = form.getMajor();
         this.studentId = form.getStudentId();
         this.password = password;
+    }
+
+    public Member(String name) {
+        this.name = name;
     }
 }
