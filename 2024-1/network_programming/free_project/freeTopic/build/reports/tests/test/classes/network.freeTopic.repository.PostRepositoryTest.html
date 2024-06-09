@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - PostRepositoryTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>PostRepositoryTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/network.freeTopic.repository.html">network.freeTopic.repository</a> &gt; PostRepositoryTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">1</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">1.113s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="clubTest()"></a>
+<h3 class="failures">clubTest()</h3>
+<span class="code">
+<pre>org.opentest4j.AssertionFailedError: 
+expected: 3
+ but was: 2
+	at java.base@17.0.10/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base@17.0.10/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base@17.0.10/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@17.0.10/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at app//network.freeTopic.repository.PostRepositoryTest.clubTest(PostRepositoryTest.java:131)
+	at java.base@17.0.10/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base@17.0.10/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base@17.0.10/java.util.ArrayList.forEach(ArrayList.java:1511)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">clubTest()</td>
+<td class="failures">1.113s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>20:13:42.176 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [network.freeTopic.repository.PostRepositoryTest]: PostRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+20:13:42.260 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration network.freeTopic.FreeTopicApplication for test class network.freeTopic.repository.PostRepositoryTest
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.0)
+
+2024-05-27T20:13:42.567+09:00  INFO 5163 --- [    Test worker] n.f.repository.PostRepositoryTest        : Starting PostRepositoryTest using Java 17.0.10 with PID 5163 (started by ichangjun in /Users/ichangjun/Programming/University-of-Soongsil/2024-1/network_programming/free_project/freeTopic)
+2024-05-27T20:13:42.568+09:00  INFO 5163 --- [    Test worker] n.f.repository.PostRepositoryTest        : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-05-27T20:13:43.136+09:00  INFO 5163 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-27T20:13:43.196+09:00  INFO 5163 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 7 JPA repository interfaces.
+2024-05-27T20:13:43.675+09:00  INFO 5163 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-27T20:13:43.710+09:00  INFO 5163 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-05-27T20:13:43.730+09:00  INFO 5163 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-05-27T20:13:43.924+09:00  INFO 5163 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-27T20:13:43.945+09:00  INFO 5163 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-05-27T20:13:44.074+09:00  INFO 5163 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:test user=SA
+2024-05-27T20:13:44.075+09:00  INFO 5163 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-05-27T20:13:44.206+09:00  WARN 5163 --- [    Test worker] o.h.boot.model.internal.EntityBinder     : HHH000457: Joined inheritance hierarchy [network.freeTopic.domain.Post] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2024-05-27T20:13:44.800+09:00  INFO 5163 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-27T20:13:44.812+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    drop table if exists category cascade 
+2024-05-27T20:13:44.816+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808424816 | took 0ms | statement | connection 1| url jdbc:h2:mem:test
+
+    drop table if exists category cascade 
+
+    drop table if exists category cascade ;
+2024-05-27T20:13:44.816+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    drop table if exists club cascade 
+2024-05-27T20:13:44.816+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808424816 | took 0ms | statement | connection 1| url jdbc:h2:mem:test
+
+    drop table if exists club cascade 
+
+    drop table if exists club cascade ;
+2024-05-27T20:13:44.816+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    drop table if exists club_post cascade 
+2024-05-27T20:13:44.817+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808424817 | took 0ms | statement | connection 1| url jdbc:h2:mem:test
+
+    drop table if exists club_post cascade 
+
+    drop table if exists club_post cascade ;
+2024-05-27T20:13:44.817+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    drop table if exists join_request cascade 
+2024-05-27T20:13:44.817+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808424817 | took 0ms | statement | connection 1| url jdbc:h2:mem:test
+
+    drop table if exists join_request cascade 
+
+    drop table if exists join_request cascade ;
+2024-05-27T20:13:44.817+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    drop table if exists member cascade 
+2024-05-27T20:13:44.818+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808424818 | took 0ms | statement | connection 1| url jdbc:h2:mem:test
+
+    drop table if exists member cascade 
+
+    drop table if exists member cascade ;
+2024-05-27T20:13:44.819+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    drop table if exists member_club cascade 
+2024-05-27T20:13:44.819+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808424819 | took 0ms | statement | connection 1| url jdbc:h2:mem:test
+
+    drop table if exists member_club cascade 
+
+    drop table if exists member_club cascade ;
+2024-05-27T20:13:44.820+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    drop table if exists post cascade 
+2024-05-27T20:13:44.820+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808424820 | took 0ms | statement | connection 1| url jdbc:h2:mem:test
+
+    drop table if exists post cascade 
+
+    drop table if exists post cascade ;
+2024-05-27T20:13:44.821+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    drop sequence if exists category_seq
+2024-05-27T20:13:44.821+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808424821 | took 0ms | statement | connection 1| url jdbc:h2:mem:test
+
+    drop sequence if exists category_seq
+
+    drop sequence if exists category_seq;
+2024-05-27T20:13:44.821+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    drop sequence if exists club_seq
+2024-05-27T20:13:44.822+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808424822 | took 0ms | statement | connection 1| url jdbc:h2:mem:test
+
+    drop sequence if exists club_seq
+
+    drop sequence if exists club_seq;
+2024-05-27T20:13:44.823+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    drop sequence if exists join_request_seq
+2024-05-27T20:13:44.823+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808424823 | took 0ms | statement | connection 1| url jdbc:h2:mem:test
+
+    drop sequence if exists join_request_seq
+
+    drop sequence if exists join_request_seq;
+2024-05-27T20:13:44.823+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    drop sequence if exists member_club_seq
+2024-05-27T20:13:44.823+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808424823 | took 0ms | statement | connection 1| url jdbc:h2:mem:test
+
+    drop sequence if exists member_club_seq
+
+    drop sequence if exists member_club_seq;
+2024-05-27T20:13:44.824+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    drop sequence if exists member_seq
+2024-05-27T20:13:44.824+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808424824 | took 0ms | statement | connection 1| url jdbc:h2:mem:test
+
+    drop sequence if exists member_seq
+
+    drop sequence if exists member_seq;
+2024-05-27T20:13:44.824+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    drop sequence if exists post_seq
+2024-05-27T20:13:44.824+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808424824 | took 0ms | statement | connection 1| url jdbc:h2:mem:test
+
+    drop sequence if exists post_seq
+
+    drop sequence if exists post_seq;
+2024-05-27T20:13:44.829+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    create sequence category_seq start with 1 increment by 50
+2024-05-27T20:13:44.831+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808424831 | took 1ms | statement | connection 2| url jdbc:h2:mem:test
+
+    create sequence category_seq start with 1 increment by 50
+
+    create sequence category_seq start with 1 increment by 50;
+2024-05-27T20:13:44.831+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    create sequence club_seq start with 1 increment by 50
+2024-05-27T20:13:44.832+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808424832 | took 0ms | statement | connection 2| url jdbc:h2:mem:test
+
+    create sequence club_seq start with 1 increment by 50
+
+    create sequence club_seq start with 1 increment by 50;
+2024-05-27T20:13:44.832+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    create sequence join_request_seq start with 1 increment by 50
+2024-05-27T20:13:44.832+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808424832 | took 0ms | statement | connection 2| url jdbc:h2:mem:test
+
+    create sequence join_request_seq start with 1 increment by 50
+
+    create sequence join_request_seq start with 1 increment by 50;
+2024-05-27T20:13:44.832+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    create sequence member_club_seq start with 1 increment by 50
+2024-05-27T20:13:44.833+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808424833 | took 0ms | statement | connection 2| url jdbc:h2:mem:test
+
+    create sequence member_club_seq start with 1 increment by 50
+
+    create sequence member_club_seq start with 1 increment by 50;
+2024-05-27T20:13:44.833+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    create sequence member_seq start with 1 increment by 50
+2024-05-27T20:13:44.833+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808424833 | took 0ms | statement | connection 2| url jdbc:h2:mem:test
+
+    create sequence member_seq start with 1 increment by 50
+
+    create sequence member_seq start with 1 increment by 50;
+2024-05-27T20:13:44.834+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    create sequence post_seq start with 1 increment by 50
+2024-05-27T20:13:44.834+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808424834 | took 0ms | statement | connection 2| url jdbc:h2:mem:test
+
+    create sequence post_seq start with 1 increment by 50
+
+    create sequence post_seq start with 1 increment by 50;
+2024-05-27T20:13:44.837+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    create table category (
+        id bigint not null,
+        description varchar(255),
+        name varchar(255),
+        primary key (id)
+    )
+2024-05-27T20:13:44.843+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808424843 | took 5ms | statement | connection 2| url jdbc:h2:mem:test
+
+    create table category (
+        id bigint not null,
+        description varchar(255),
+        name varchar(255),
+        primary key (id)
+    )
+
+    create table category (
+        id bigint not null,
+        description varchar(255),
+        name varchar(255),
+        primary key (id)
+    );
+2024-05-27T20:13:44.844+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    create table club (
+        category_id bigint unique,
+        created_time timestamp(6),
+        id bigint not null,
+        lead_id bigint,
+        modified_time timestamp(6),
+        description varchar(255),
+        name varchar(255),
+        primary key (id)
+    )
+2024-05-27T20:13:44.846+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808424846 | took 2ms | statement | connection 2| url jdbc:h2:mem:test
+
+    create table club (
+        category_id bigint unique,
+        created_time timestamp(6),
+        id bigint not null,
+        lead_id bigint,
+        modified_time timestamp(6),
+        description varchar(255),
+        name varchar(255),
+        primary key (id)
+    )
+
+    create table club (
+        category_id bigint unique,
+        created_time timestamp(6),
+        id bigint not null,
+        lead_id bigint,
+        modified_time timestamp(6),
+        description varchar(255),
+        name varchar(255),
+        primary key (id)
+    );
+2024-05-27T20:13:44.848+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    create table club_post (
+        permission tinyint check (permission between 0 and 1),
+        club_id bigint,
+        id bigint not null,
+        primary key (id)
+    )
+2024-05-27T20:13:44.853+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808424853 | took 4ms | statement | connection 2| url jdbc:h2:mem:test
+
+    create table club_post (
+        permission tinyint check (permission between 0 and 1),
+        club_id bigint,
+        id bigint not null,
+        primary key (id)
+    )
+
+    create table club_post (
+        permission tinyint check (permission between 0 and 1),
+        club_id bigint,
+        id bigint not null,
+        primary key (id)
+    );
+2024-05-27T20:13:44.853+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    create table join_request (
+        club_id bigint,
+        id bigint not null,
+        member_id bigint,
+        self_introduce varchar(255),
+        status enum ('CANCEL','DENY','REQUEST'),
+        primary key (id)
+    )
+2024-05-27T20:13:44.854+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808424854 | took 0ms | statement | connection 2| url jdbc:h2:mem:test
+
+    create table join_request (
+        club_id bigint,
+        id bigint not null,
+        member_id bigint,
+        self_introduce varchar(255),
+        status enum ('CANCEL','DENY','REQUEST'),
+        primary key (id)
+    )
+
+    create table join_request (
+        club_id bigint,
+        id bigint not null,
+        member_id bigint,
+        self_introduce varchar(255),
+        status enum ('CANCEL','DENY','REQUEST'),
+        primary key (id)
+    );
+2024-05-27T20:13:44.855+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    create table member (
+        created_time timestamp(6),
+        id bigint not null,
+        modified_time timestamp(6),
+        major varchar(255),
+        name varchar(255),
+        password varchar(255),
+        role varchar(255),
+        student_id varchar(255),
+        primary key (id)
+    )
+2024-05-27T20:13:44.856+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808424856 | took 0ms | statement | connection 2| url jdbc:h2:mem:test
+
+    create table member (
+        created_time timestamp(6),
+        id bigint not null,
+        modified_time timestamp(6),
+        major varchar(255),
+        name varchar(255),
+        password varchar(255),
+        role varchar(255),
+        student_id varchar(255),
+        primary key (id)
+    )
+
+    create table member (
+        created_time timestamp(6),
+        id bigint not null,
+        modified_time timestamp(6),
+        major varchar(255),
+        name varchar(255),
+        password varchar(255),
+        role varchar(255),
+        student_id varchar(255),
+        primary key (id)
+    );
+2024-05-27T20:13:44.857+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    create table member_club (
+        role tinyint check (role between 0 and 2),
+        club_id bigint,
+        created_time timestamp(6),
+        id bigint not null,
+        member_id bigint,
+        modified_time timestamp(6),
+        primary key (id)
+    )
+2024-05-27T20:13:44.858+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808424858 | took 0ms | statement | connection 2| url jdbc:h2:mem:test
+
+    create table member_club (
+        role tinyint check (role between 0 and 2),
+        club_id bigint,
+        created_time timestamp(6),
+        id bigint not null,
+        member_id bigint,
+        modified_time timestamp(6),
+        primary key (id)
+    )
+
+    create table member_club (
+        role tinyint check (role between 0 and 2),
+        club_id bigint,
+        created_time timestamp(6),
+        id bigint not null,
+        member_id bigint,
+        modified_time timestamp(6),
+        primary key (id)
+    );
+2024-05-27T20:13:44.859+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    create table post (
+        created_time timestamp(6),
+        id bigint not null,
+        modified_time timestamp(6),
+        poster bigint,
+        dtype varchar(31) not null,
+        text_detail varchar(255),
+        title varchar(255),
+        primary key (id)
+    )
+2024-05-27T20:13:44.860+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808424860 | took 1ms | statement | connection 2| url jdbc:h2:mem:test
+
+    create table post (
+        created_time timestamp(6),
+        id bigint not null,
+        modified_time timestamp(6),
+        poster bigint,
+        dtype varchar(31) not null,
+        text_detail varchar(255),
+        title varchar(255),
+        primary key (id)
+    )
+
+    create table post (
+        created_time timestamp(6),
+        id bigint not null,
+        modified_time timestamp(6),
+        poster bigint,
+        dtype varchar(31) not null,
+        text_detail varchar(255),
+        title varchar(255),
+        primary key (id)
+    );
+2024-05-27T20:13:44.861+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists club 
+       add constraint FKnwcmobsheokxmn25yyidm07no 
+       foreign key (lead_id) 
+       references member
+2024-05-27T20:13:44.869+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808424869 | took 7ms | statement | connection 2| url jdbc:h2:mem:test
+
+    alter table if exists club 
+       add constraint FKnwcmobsheokxmn25yyidm07no 
+       foreign key (lead_id) 
+       references member
+
+    alter table if exists club 
+       add constraint FKnwcmobsheokxmn25yyidm07no 
+       foreign key (lead_id) 
+       references member;
+2024-05-27T20:13:44.869+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists club 
+       add constraint FK7r2d0mrithdrh92f1e9e3od8f 
+       foreign key (category_id) 
+       references category
+2024-05-27T20:13:44.870+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808424870 | took 0ms | statement | connection 2| url jdbc:h2:mem:test
+
+    alter table if exists club 
+       add constraint FK7r2d0mrithdrh92f1e9e3od8f 
+       foreign key (category_id) 
+       references category
+
+    alter table if exists club 
+       add constraint FK7r2d0mrithdrh92f1e9e3od8f 
+       foreign key (category_id) 
+       references category;
+2024-05-27T20:13:44.870+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists club_post 
+       add constraint FKb4yqhmg9trd239sufaqsq8l66 
+       foreign key (club_id) 
+       references club
+2024-05-27T20:13:44.872+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808424872 | took 1ms | statement | connection 2| url jdbc:h2:mem:test
+
+    alter table if exists club_post 
+       add constraint FKb4yqhmg9trd239sufaqsq8l66 
+       foreign key (club_id) 
+       references club
+
+    alter table if exists club_post 
+       add constraint FKb4yqhmg9trd239sufaqsq8l66 
+       foreign key (club_id) 
+       references club;
+2024-05-27T20:13:44.873+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists club_post 
+       add constraint FKiqjwpfewmax4dvm8wi6nunqy3 
+       foreign key (id) 
+       references post
+2024-05-27T20:13:44.874+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808424874 | took 0ms | statement | connection 2| url jdbc:h2:mem:test
+
+    alter table if exists club_post 
+       add constraint FKiqjwpfewmax4dvm8wi6nunqy3 
+       foreign key (id) 
+       references post
+
+    alter table if exists club_post 
+       add constraint FKiqjwpfewmax4dvm8wi6nunqy3 
+       foreign key (id) 
+       references post;
+2024-05-27T20:13:44.874+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists join_request 
+       add constraint FKijgka6gp1f2ptr862e6sr9on4 
+       foreign key (club_id) 
+       references club
+2024-05-27T20:13:44.875+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808424875 | took 1ms | statement | connection 2| url jdbc:h2:mem:test
+
+    alter table if exists join_request 
+       add constraint FKijgka6gp1f2ptr862e6sr9on4 
+       foreign key (club_id) 
+       references club
+
+    alter table if exists join_request 
+       add constraint FKijgka6gp1f2ptr862e6sr9on4 
+       foreign key (club_id) 
+       references club;
+2024-05-27T20:13:44.875+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists join_request 
+       add constraint FKnxpcf89fghgo6atfsyxm15nki 
+       foreign key (member_id) 
+       references member
+2024-05-27T20:13:44.877+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808424877 | took 1ms | statement | connection 2| url jdbc:h2:mem:test
+
+    alter table if exists join_request 
+       add constraint FKnxpcf89fghgo6atfsyxm15nki 
+       foreign key (member_id) 
+       references member
+
+    alter table if exists join_request 
+       add constraint FKnxpcf89fghgo6atfsyxm15nki 
+       foreign key (member_id) 
+       references member;
+2024-05-27T20:13:44.877+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists member_club 
+       add constraint FK73tthgfalulir41hmwmuwieyc 
+       foreign key (club_id) 
+       references club
+2024-05-27T20:13:44.878+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808424878 | took 1ms | statement | connection 2| url jdbc:h2:mem:test
+
+    alter table if exists member_club 
+       add constraint FK73tthgfalulir41hmwmuwieyc 
+       foreign key (club_id) 
+       references club
+
+    alter table if exists member_club 
+       add constraint FK73tthgfalulir41hmwmuwieyc 
+       foreign key (club_id) 
+       references club;
+2024-05-27T20:13:44.879+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists member_club 
+       add constraint FKbwpq58hyksntm0wcrunw2hcqe 
+       foreign key (member_id) 
+       references member
+2024-05-27T20:13:44.881+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808424881 | took 1ms | statement | connection 2| url jdbc:h2:mem:test
+
+    alter table if exists member_club 
+       add constraint FKbwpq58hyksntm0wcrunw2hcqe 
+       foreign key (member_id) 
+       references member
+
+    alter table if exists member_club 
+       add constraint FKbwpq58hyksntm0wcrunw2hcqe 
+       foreign key (member_id) 
+       references member;
+2024-05-27T20:13:44.881+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists post 
+       add constraint FK7v93rgw4gjyvtibhcxky61nd4 
+       foreign key (poster) 
+       references member
+2024-05-27T20:13:44.883+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808424883 | took 2ms | statement | connection 2| url jdbc:h2:mem:test
+
+    alter table if exists post 
+       add constraint FK7v93rgw4gjyvtibhcxky61nd4 
+       foreign key (poster) 
+       references member
+
+    alter table if exists post 
+       add constraint FK7v93rgw4gjyvtibhcxky61nd4 
+       foreign key (poster) 
+       references member;
+2024-05-27T20:13:44.886+09:00  INFO 5163 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27T20:13:45.332+09:00  WARN 5163 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-27T20:13:45.830+09:00  WARN 5163 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 90735eff-3fe6-44f8-a817-7c37111d8011
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-05-27T20:13:45.838+09:00  INFO 5163 --- [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-05-27T20:13:45.936+09:00  INFO 5163 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7ba70b3b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3a72b2c9, org.springframework.security.web.context.SecurityContextHolderFilter@1e6a8d01, org.springframework.security.web.header.HeaderWriterFilter@316987c4, org.springframework.web.filter.CorsFilter@269a37bc, org.springframework.security.web.csrf.CsrfFilter@19984625, org.springframework.security.web.authentication.logout.LogoutFilter@38cbbd0b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@100235c7, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4e7d77ec, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@106e816c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@498102a4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@34b4c82a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2daf650b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@53d3ae89, org.springframework.security.web.access.ExceptionTranslationFilter@30f0b75, org.springframework.security.web.access.intercept.AuthorizationFilter@5acc6ca1]
+2024-05-27T20:13:45.989+09:00  INFO 5163 --- [    Test worker] n.f.repository.PostRepositoryTest        : Started PostRepositoryTest in 3.614 seconds (process running for 4.51)
+2024-05-27T20:13:46.396+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        next value for member_seq
+2024-05-27T20:13:46.406+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808426406 | took 6ms | statement | connection 3| url jdbc:h2:mem:test
+select next value for member_seq
+select next value for member_seq;
+2024-05-27T20:13:46.447+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        member
+        (created_time, major, modified_time, name, password, role, student_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2024-05-27T20:13:46.451+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808426451 | took 0ms | statement | connection 3| url jdbc:h2:mem:test
+insert into member (created_time,major,modified_time,name,password,role,student_id,id) values (?,?,?,?,?,?,?,?)
+insert into member (created_time,major,modified_time,name,password,role,student_id,id) values ('2024-05-27T20:13:46.422+0900',NULL,'2024-05-27T20:13:46.422+0900','lee',NULL,NULL,NULL,1);
+2024-05-27T20:13:46.454+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808426454 | took 0ms | commit | connection 3| url jdbc:h2:mem:test
+
+;
+2024-05-27T20:13:46.455+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        next value for member_seq
+2024-05-27T20:13:46.455+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808426455 | took 0ms | statement | connection 4| url jdbc:h2:mem:test
+select next value for member_seq
+select next value for member_seq;
+2024-05-27T20:13:46.456+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        member
+        (created_time, major, modified_time, name, password, role, student_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2024-05-27T20:13:46.456+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808426456 | took 0ms | statement | connection 4| url jdbc:h2:mem:test
+insert into member (created_time,major,modified_time,name,password,role,student_id,id) values (?,?,?,?,?,?,?,?)
+insert into member (created_time,major,modified_time,name,password,role,student_id,id) values ('2024-05-27T20:13:46.455+0900',NULL,'2024-05-27T20:13:46.455+0900','ki',NULL,NULL,NULL,2);
+2024-05-27T20:13:46.457+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808426457 | took 0ms | commit | connection 4| url jdbc:h2:mem:test
+
+;
+2024-05-27T20:13:46.457+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        next value for club_seq
+2024-05-27T20:13:46.458+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808426458 | took 0ms | statement | connection 5| url jdbc:h2:mem:test
+select next value for club_seq
+select next value for club_seq;
+2024-05-27T20:13:46.463+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        club
+        (lead_id, category_id, created_time, description, modified_time, name, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2024-05-27T20:13:46.464+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808426464 | took 0ms | statement | connection 5| url jdbc:h2:mem:test
+insert into club (lead_id,category_id,created_time,description,modified_time,name,id) values (?,?,?,?,?,?,?)
+insert into club (lead_id,category_id,created_time,description,modified_time,name,id) values (NULL,NULL,'2024-05-27T20:13:46.460+0900',NULL,'2024-05-27T20:13:46.460+0900','clubA',1);
+2024-05-27T20:13:46.465+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808426465 | took 0ms | commit | connection 5| url jdbc:h2:mem:test
+
+;
+2024-05-27T20:13:46.465+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        next value for club_seq
+2024-05-27T20:13:46.465+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808426465 | took 0ms | statement | connection 6| url jdbc:h2:mem:test
+select next value for club_seq
+select next value for club_seq;
+2024-05-27T20:13:46.466+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        club
+        (lead_id, category_id, created_time, description, modified_time, name, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2024-05-27T20:13:46.467+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808426467 | took 0ms | statement | connection 6| url jdbc:h2:mem:test
+insert into club (lead_id,category_id,created_time,description,modified_time,name,id) values (?,?,?,?,?,?,?)
+insert into club (lead_id,category_id,created_time,description,modified_time,name,id) values (NULL,NULL,'2024-05-27T20:13:46.466+0900',NULL,'2024-05-27T20:13:46.466+0900','clubB',2);
+2024-05-27T20:13:46.467+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808426467 | took 0ms | commit | connection 6| url jdbc:h2:mem:test
+
+;
+2024-05-27T20:13:46.468+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        next value for post_seq
+2024-05-27T20:13:46.469+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808426469 | took 0ms | statement | connection 7| url jdbc:h2:mem:test
+select next value for post_seq
+select next value for post_seq;
+2024-05-27T20:13:46.474+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (created_time, poster, modified_time, text_detail, title, dtype, id) 
+    values
+        (?, ?, ?, ?, ?, 'C', ?)
+2024-05-27T20:13:46.475+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808426475 | took 0ms | statement | connection 7| url jdbc:h2:mem:test
+insert into post (created_time,poster,modified_time,text_detail,title,dtype,id) values (?,?,?,?,?,'C',?)
+insert into post (created_time,poster,modified_time,text_detail,title,dtype,id) values ('2024-05-27T20:13:46.470+0900',NULL,'2024-05-27T20:13:46.470+0900',NULL,'post1','C',1);
+2024-05-27T20:13:46.476+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        club_post
+        (club_id, permission, id) 
+    values
+        (?, ?, ?)
+2024-05-27T20:13:46.476+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808426476 | took 0ms | statement | connection 7| url jdbc:h2:mem:test
+insert into club_post (club_id,permission,id) values (?,?,?)
+insert into club_post (club_id,permission,id) values (1,NULL,1);
+2024-05-27T20:13:46.476+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808426476 | took 0ms | commit | connection 7| url jdbc:h2:mem:test
+
+;
+2024-05-27T20:13:46.477+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        next value for post_seq
+2024-05-27T20:13:46.480+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808426480 | took 2ms | statement | connection 8| url jdbc:h2:mem:test
+select next value for post_seq
+select next value for post_seq;
+2024-05-27T20:13:46.481+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (created_time, poster, modified_time, text_detail, title, dtype, id) 
+    values
+        (?, ?, ?, ?, ?, 'C', ?)
+2024-05-27T20:13:46.482+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808426482 | took 0ms | statement | connection 8| url jdbc:h2:mem:test
+insert into post (created_time,poster,modified_time,text_detail,title,dtype,id) values (?,?,?,?,?,'C',?)
+insert into post (created_time,poster,modified_time,text_detail,title,dtype,id) values ('2024-05-27T20:13:46.480+0900',NULL,'2024-05-27T20:13:46.480+0900',NULL,'post2','C',2);
+2024-05-27T20:13:46.482+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        club_post
+        (club_id, permission, id) 
+    values
+        (?, ?, ?)
+2024-05-27T20:13:46.482+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808426482 | took 0ms | statement | connection 8| url jdbc:h2:mem:test
+insert into club_post (club_id,permission,id) values (?,?,?)
+insert into club_post (club_id,permission,id) values (1,NULL,2);
+2024-05-27T20:13:46.483+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808426483 | took 0ms | commit | connection 8| url jdbc:h2:mem:test
+
+;
+2024-05-27T20:13:46.485+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (created_time, poster, modified_time, text_detail, title, dtype, id) 
+    values
+        (?, ?, ?, ?, ?, 'C', ?)
+2024-05-27T20:13:46.486+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808426486 | took 0ms | statement | connection 9| url jdbc:h2:mem:test
+insert into post (created_time,poster,modified_time,text_detail,title,dtype,id) values (?,?,?,?,?,'C',?)
+insert into post (created_time,poster,modified_time,text_detail,title,dtype,id) values ('2024-05-27T20:13:46.484+0900',NULL,'2024-05-27T20:13:46.484+0900',NULL,'post3','C',3);
+2024-05-27T20:13:46.486+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        club_post
+        (club_id, permission, id) 
+    values
+        (?, ?, ?)
+2024-05-27T20:13:46.487+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808426487 | took 0ms | statement | connection 9| url jdbc:h2:mem:test
+insert into club_post (club_id,permission,id) values (?,?,?)
+insert into club_post (club_id,permission,id) values (1,NULL,3);
+2024-05-27T20:13:46.487+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808426487 | took 0ms | commit | connection 9| url jdbc:h2:mem:test
+
+;
+2024-05-27T20:13:46.488+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (created_time, poster, modified_time, text_detail, title, dtype, id) 
+    values
+        (?, ?, ?, ?, ?, 'C', ?)
+2024-05-27T20:13:46.489+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808426489 | took 0ms | statement | connection 10| url jdbc:h2:mem:test
+insert into post (created_time,poster,modified_time,text_detail,title,dtype,id) values (?,?,?,?,?,'C',?)
+insert into post (created_time,poster,modified_time,text_detail,title,dtype,id) values ('2024-05-27T20:13:46.488+0900',NULL,'2024-05-27T20:13:46.488+0900',NULL,'post4','C',4);
+2024-05-27T20:13:46.489+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        club_post
+        (club_id, permission, id) 
+    values
+        (?, ?, ?)
+2024-05-27T20:13:46.489+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808426489 | took 0ms | statement | connection 10| url jdbc:h2:mem:test
+insert into club_post (club_id,permission,id) values (?,?,?)
+insert into club_post (club_id,permission,id) values (2,NULL,4);
+2024-05-27T20:13:46.490+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808426490 | took 0ms | commit | connection 10| url jdbc:h2:mem:test
+
+;
+2024-05-27T20:13:46.491+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (created_time, poster, modified_time, text_detail, title, dtype, id) 
+    values
+        (?, ?, ?, ?, ?, 'C', ?)
+2024-05-27T20:13:46.492+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808426492 | took 0ms | statement | connection 11| url jdbc:h2:mem:test
+insert into post (created_time,poster,modified_time,text_detail,title,dtype,id) values (?,?,?,?,?,'C',?)
+insert into post (created_time,poster,modified_time,text_detail,title,dtype,id) values ('2024-05-27T20:13:46.491+0900',NULL,'2024-05-27T20:13:46.491+0900',NULL,'post5','C',5);
+2024-05-27T20:13:46.492+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        club_post
+        (club_id, permission, id) 
+    values
+        (?, ?, ?)
+2024-05-27T20:13:46.492+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808426492 | took 0ms | statement | connection 11| url jdbc:h2:mem:test
+insert into club_post (club_id,permission,id) values (?,?,?)
+insert into club_post (club_id,permission,id) values (2,NULL,5);
+2024-05-27T20:13:46.493+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808426493 | took 0ms | commit | connection 11| url jdbc:h2:mem:test
+
+;
+2024-05-27T20:13:46.494+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (created_time, poster, modified_time, text_detail, title, dtype, id) 
+    values
+        (?, ?, ?, ?, ?, 'C', ?)
+2024-05-27T20:13:46.495+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808426495 | took 0ms | statement | connection 12| url jdbc:h2:mem:test
+insert into post (created_time,poster,modified_time,text_detail,title,dtype,id) values (?,?,?,?,?,'C',?)
+insert into post (created_time,poster,modified_time,text_detail,title,dtype,id) values ('2024-05-27T20:13:46.494+0900',NULL,'2024-05-27T20:13:46.494+0900',NULL,'post6','C',6);
+2024-05-27T20:13:46.495+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        club_post
+        (club_id, permission, id) 
+    values
+        (?, ?, ?)
+2024-05-27T20:13:46.495+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808426495 | took 0ms | statement | connection 12| url jdbc:h2:mem:test
+insert into club_post (club_id,permission,id) values (?,?,?)
+insert into club_post (club_id,permission,id) values (2,NULL,6);
+2024-05-27T20:13:46.496+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808426495 | took 0ms | commit | connection 12| url jdbc:h2:mem:test
+
+;
+2024-05-27T20:13:46.977+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        cp1_0.id,
+        cp1_1.created_time,
+        cp1_1.poster,
+        cp1_1.modified_time,
+        cp1_1.text_detail,
+        cp1_1.title,
+        cp1_0.club_id,
+        cp1_0.permission 
+    from
+        club_post cp1_0 
+    join
+        post cp1_1 
+            on cp1_0.id=cp1_1.id, club c1_0 
+    where
+        cp1_0.club_id=? 
+    order by
+        cp1_1.created_time 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2024-05-27T20:13:46.980+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808426980 | took 0ms | statement | connection 13| url jdbc:h2:mem:test
+select cp1_0.id,cp1_1.created_time,cp1_1.poster,cp1_1.modified_time,cp1_1.text_detail,cp1_1.title,cp1_0.club_id,cp1_0.permission from club_post cp1_0 join post cp1_1 on cp1_0.id=cp1_1.id,club c1_0 where cp1_0.club_id=? order by cp1_1.created_time offset ? rows fetch first ? rows only
+select cp1_0.id,cp1_1.created_time,cp1_1.poster,cp1_1.modified_time,cp1_1.text_detail,cp1_1.title,cp1_0.club_id,cp1_0.permission from club_post cp1_0 join post cp1_1 on cp1_0.id=cp1_1.id,club c1_0 where cp1_0.club_id=1 order by cp1_1.created_time offset 3 rows fetch first 3 rows only;
+2024-05-27T20:13:47.023+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        count(cp1_0.id) 
+    from
+        club_post cp1_0,
+        club c1_0 
+    where
+        cp1_0.club_id=?
+2024-05-27T20:13:47.029+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808427029 | took 5ms | statement | connection 14| url jdbc:h2:mem:test
+select count(cp1_0.id) from club_post cp1_0,club c1_0 where cp1_0.club_id=?
+select count(cp1_0.id) from club_post cp1_0,club c1_0 where cp1_0.club_id=1;
+2024-05-27T20:13:47.032+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        cp1_0.id,
+        cp1_1.created_time,
+        cp1_1.poster,
+        cp1_1.modified_time,
+        cp1_1.text_detail,
+        cp1_1.title,
+        cp1_0.club_id,
+        cp1_0.permission 
+    from
+        club_post cp1_0 
+    join
+        post cp1_1 
+            on cp1_0.id=cp1_1.id, club c1_0 
+    where
+        cp1_0.club_id=? 
+    order by
+        cp1_1.created_time 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2024-05-27T20:13:47.035+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808427035 | took 1ms | statement | connection 15| url jdbc:h2:mem:test
+select cp1_0.id,cp1_1.created_time,cp1_1.poster,cp1_1.modified_time,cp1_1.text_detail,cp1_1.title,cp1_0.club_id,cp1_0.permission from club_post cp1_0 join post cp1_1 on cp1_0.id=cp1_1.id,club c1_0 where cp1_0.club_id=? order by cp1_1.created_time offset ? rows fetch first ? rows only
+select cp1_0.id,cp1_1.created_time,cp1_1.poster,cp1_1.modified_time,cp1_1.text_detail,cp1_1.title,cp1_0.club_id,cp1_0.permission from club_post cp1_0 join post cp1_1 on cp1_0.id=cp1_1.id,club c1_0 where cp1_0.club_id=2 order by cp1_1.created_time offset 3 rows fetch first 3 rows only;
+2024-05-27T20:13:47.038+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        count(cp1_0.id) 
+    from
+        club_post cp1_0,
+        club c1_0 
+    where
+        cp1_0.club_id=?
+2024-05-27T20:13:47.039+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808427039 | took 0ms | statement | connection 16| url jdbc:h2:mem:test
+select count(cp1_0.id) from club_post cp1_0,club c1_0 where cp1_0.club_id=?
+select count(cp1_0.id) from club_post cp1_0,club c1_0 where cp1_0.club_id=2;
+2024-05-27T20:13:47.045+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.created_time,
+        p1_0.poster,
+        p1_0.modified_time,
+        p1_0.text_detail,
+        p1_0.title,
+        p1_1.club_id,
+        p1_1.permission 
+    from
+        post p1_0 
+    left join
+        club_post p1_1 
+            on p1_0.id=p1_1.id 
+    order by
+        p1_0.created_time 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2024-05-27T20:13:47.046+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808427046 | took 0ms | statement | connection 17| url jdbc:h2:mem:test
+select p1_0.id,p1_0.dtype,p1_0.created_time,p1_0.poster,p1_0.modified_time,p1_0.text_detail,p1_0.title,p1_1.club_id,p1_1.permission from post p1_0 left join club_post p1_1 on p1_0.id=p1_1.id order by p1_0.created_time offset ? rows fetch first ? rows only
+select p1_0.id,p1_0.dtype,p1_0.created_time,p1_0.poster,p1_0.modified_time,p1_0.text_detail,p1_0.title,p1_1.club_id,p1_1.permission from post p1_0 left join club_post p1_1 on p1_0.id=p1_1.id order by p1_0.created_time offset 3 rows fetch first 3 rows only;
+2024-05-27T20:13:47.048+09:00 DEBUG 5163 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        count(p1_0.id) 
+    from
+        post p1_0
+2024-05-27T20:13:47.048+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808427048 | took 0ms | statement | connection 17| url jdbc:h2:mem:test
+select count(p1_0.id) from post p1_0
+select count(p1_0.id) from post p1_0;
+2024-05-27T20:13:47.048+09:00  INFO 5163 --- [    Test worker] p6spy                                    : #1716808427048 | took 0ms | commit | connection 17| url jdbc:h2:mem:test
+
+;
+clubPost.getTitle() = post4
+clubPost.getTitle() = post5
+clubPost.getTitle() = post6
+a.getSize() = 3
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.7</a> at 2024. 5. 27. 오후 8:13:47</p>
+</div>
+</div>
+</body>
+</html>
