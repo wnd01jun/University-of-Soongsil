@@ -2,14 +2,12 @@ package network.freeTopic.service;
 
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
+import network.freeTopic.domain.Category;
 import network.freeTopic.domain.Club;
 import network.freeTopic.domain.Member;
 import network.freeTopic.form.ClubCreateForm;
 import network.freeTopic.form.ClubJoinForm;
-import network.freeTopic.repository.ClubRepository;
-import network.freeTopic.repository.JoinRequestRepository;
-import network.freeTopic.repository.MemberClubRepository;
-import network.freeTopic.repository.MemberRepository;
+import network.freeTopic.repository.*;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,6 +17,7 @@ import java.util.List;
 public class ClubService {
     private final ClubRepository clubRepository;
     private final MemberRepository memberRepository;
+    private final CategoryRepository categoryRepository;
 
     @PostConstruct
     public void init(){

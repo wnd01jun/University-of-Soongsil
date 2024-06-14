@@ -71,14 +71,14 @@ public class ClubController {
     @PostMapping("/{id}/deny")
     public String joinDeny(@PathVariable("id")Long id){
         joinRequestService.deny(id);
-        return "redirect:/clubs/check";
+        return "redirect:/clubs/join/check";
     }
 
     @PostMapping("/{id}/accept")
     public String joinAccept(@PathVariable("id")Long id){
         JoinRequest accept = joinRequestService.accept(id);
         memberClubService.save(accept.getMember(), accept.getClub());
-        return "redirect:/clubs/check";
+        return "redirect:/clubs/join/check";
     }
 
     @GetMapping("/menu")

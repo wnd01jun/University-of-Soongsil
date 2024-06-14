@@ -35,7 +35,7 @@
             <th>회장</th>
             <th>소개</th>
             <th>분류</th>
-            <th>작성일</th>
+            <th>생성일</th>
         </tr>
         </thead>
         <tbody>
@@ -47,7 +47,8 @@
             <td><a th:href="@{/reviews/list(id=${club.id})}" th:text="${club.name}"></a></td>
             <td th:text="${club.leader.studentId} + '/' + ${club.leader.name}"></td>
             <td th:text="${club.description}"></td>
-            <td th:text="${club.name}"></td>
+            <td th:if="${club.category != null}" th:text="${club.category.name}"></td>
+            <td th:if="${club.category == null}" th:text="Null"></td>
             <td th:text="${club.createdTime}"></td>
         </tr>
         </tbody>
