@@ -2,22 +2,19 @@ package network.freeTopic.controller;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.java.Log;
-import network.freeTopic.domain.Category;
-import network.freeTopic.domain.Club;
-import network.freeTopic.domain.JoinRequest;
-import network.freeTopic.domain.Member;
+import network.freeTopic.domain.*;
 import network.freeTopic.form.ClubCreateForm;
 import network.freeTopic.form.ClubJoinForm;
+import network.freeTopic.form.ReviewWriteForm;
 import network.freeTopic.security.Login;
-import network.freeTopic.service.CategoryService;
-import network.freeTopic.service.ClubService;
-import network.freeTopic.service.JoinRequestService;
-import network.freeTopic.service.MemberClubService;
+import network.freeTopic.service.*;
+import org.hibernate.validator.constraints.ModCheck;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -29,6 +26,7 @@ public class ClubController {
     private final JoinRequestService joinRequestService;
     private final MemberClubService memberClubService;
     private final CategoryService categoryService;
+    private final MemberService memberService;
 
     @GetMapping("/create")
     public String create(@ModelAttribute("clubCreateForm")ClubCreateForm form,
@@ -95,6 +93,25 @@ public class ClubController {
         model.addAttribute("clubs", all);
         return "/club/list";
     }
+
+    @GetMapping("/review/write")
+    public String writeReview(@Login Member member,
+            @ModelAttribute("form") ReviewWriteForm form,
+                              Model model){
+        List<Club> clubs = memberService.findClubName(member);
+        model.addAttribute("clubs", clubs);
+
+        List<Double> sequence = new ArrayList<>();
+        for(double i = 0.5; i <= 5; i += 0.5){
+            sequence.add(i);
+        }
+        model.addAttribute("sequence", sequence);
+        return "/review/create";
+    }
+
+
+
+
 
 
 }

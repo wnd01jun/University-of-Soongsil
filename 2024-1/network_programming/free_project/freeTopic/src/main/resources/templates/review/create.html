@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>동아리 리뷰 작성</title>
+
+    <style>
+        body {
+            padding-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h2 class="mb-4">동아리 리뷰 작성</h2>
+    <form action="#" th:action="@{/reviews/write}" th:object="${form}" method="post">
+        <!-- 동아리 선택 -->
+        <div class="form-group">
+            <label for="clubSelect">동아리 선택</label>
+            <select class="form-control" id="clubSelect" th:field="*{club}" name="clubId" required>
+                <option value="" disabled selected>동아리를 선택하세요</option>
+                <option th:each="club : ${clubs}" th:value="${club.id}" th:text="${club.name}"></option>
+            </select>
+        </div>
+
+        <!-- 점수 선택 -->
+        <div class="form-group">
+            <label for="ratingSelect">점수 선택</label>
+            <select class="form-control" id="ratingSelect" th:field="*{score}" name="rating" required>
+                <option value="" disabled selected>점수를 선택하세요</option>
+                <option th:each="score : ${sequence}" th:value="${score}" th:text="${score}"></option>
+            </select>
+        </div>
+
+        <!-- 리뷰 내용 -->
+        <div class="form-group">
+            <label for="reviewContent">리뷰 내용</label>
+            <textarea class="form-control" id="reviewContent" th:field="*{content}" name="content" rows="5" required placeholder="리뷰 내용을 작성하세요"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">리뷰 작성</button>
+    </form>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

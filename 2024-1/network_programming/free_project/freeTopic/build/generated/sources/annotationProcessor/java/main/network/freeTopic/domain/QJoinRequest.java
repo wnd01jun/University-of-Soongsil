@@ -22,9 +22,14 @@ public class QJoinRequest extends EntityPathBase<JoinRequest> {
 
     public static final QJoinRequest joinRequest = new QJoinRequest("joinRequest");
 
+    public final QBaseEntity _super = new QBaseEntity(this);
+
     public final QClub club;
 
     public final StringPath contact = createString("contact");
+
+    //inherited
+    public final DateTimePath<java.time.LocalDateTime> createdTime = _super.createdTime;
 
     public final NumberPath<Long> id = createNumber("id", Long.class);
 
@@ -33,6 +38,9 @@ public class QJoinRequest extends EntityPathBase<JoinRequest> {
     public final EnumPath<network.freeTopic.domain.enums.JoinStatus> joinStatus = createEnum("joinStatus", network.freeTopic.domain.enums.JoinStatus.class);
 
     public final QMember member;
+
+    //inherited
+    public final DateTimePath<java.time.LocalDateTime> modifiedTime = _super.modifiedTime;
 
     public QJoinRequest(String variable) {
         this(JoinRequest.class, forVariable(variable), INITS);

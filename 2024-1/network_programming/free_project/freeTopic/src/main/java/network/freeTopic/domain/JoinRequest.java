@@ -15,7 +15,7 @@ import network.freeTopic.domain.enums.JoinStatus;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class JoinRequest {
+public class JoinRequest extends BaseEntity{
     @Id
     @GeneratedValue
     private Long id;

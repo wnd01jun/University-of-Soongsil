@@ -43,7 +43,8 @@ public class PostController {
     @GetMapping
     public String posts(@PageableDefault(size = 10, page = 0)Pageable pageable, Model model,
                         @ModelAttribute("postSearchCondition")PostSearchCondition postSearchCondition){
-        Page<BoardResponseDto> pages = postService.findAllByPage(pageable);
+        log.info("condition = {}", postSearchCondition);
+        Page<BoardResponseDto> pages = postService.findAllByPage(pageable, postSearchCondition);
         if(pages == null){
             log.info("page is empty");
             pages = Page.empty();

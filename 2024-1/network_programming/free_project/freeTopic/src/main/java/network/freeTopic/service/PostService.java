@@ -37,8 +37,8 @@ public class PostService {
         return postRepository.findByMemberPage(member, pageable);
     }
 
-    public Page<BoardResponseDto> findAllByPage(Pageable pageable){
-        Page<Post> posts = postRepository.findBoardInfo(pageable);
+    public Page<BoardResponseDto> findAllByPage(Pageable pageable, PostSearchCondition condition){
+        Page<Post> posts = postRepository.findBoardInfo(pageable, condition);
         List<BoardResponseDto> boards = posts.stream()
                 .map(post -> BoardResponseDto.builder()
                         .id(post.getId())

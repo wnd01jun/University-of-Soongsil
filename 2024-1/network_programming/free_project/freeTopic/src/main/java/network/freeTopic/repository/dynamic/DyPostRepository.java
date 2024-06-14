@@ -12,7 +12,7 @@ import org.springframework.data.domain.Pageable;
 public interface DyPostRepository {
     Page<Post> findByMemberPage(Member member, Pageable pageable);
 
-    Page<Post> findBoardInfo(Pageable pageable);
+    Page<Post> findBoardInfo(Pageable pageable, PostSearchCondition condition);
 
 
     Page<ClubPost> findByClub(Club club, Pageable pageable);

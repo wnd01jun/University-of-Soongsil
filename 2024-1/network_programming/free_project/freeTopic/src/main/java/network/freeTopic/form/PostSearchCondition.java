@@ -1,14 +1,12 @@
 package network.freeTopic.form;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import network.freeTopic.domain.Category;
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
+@ToString
 public class PostSearchCondition {
     private String title;
     private String clubName;

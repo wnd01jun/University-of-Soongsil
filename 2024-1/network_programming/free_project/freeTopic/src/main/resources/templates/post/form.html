@@ -24,7 +24,7 @@
         <div class="form-group">
             <label for="club">소속 클럽</label>
             <select id="club" name="club" class="form-control" th:field="*{club}" required>
-                <option value="" disabled selected>클럽을 선택하세요</option>
+                <option value="" disabled selected>동아리를 선택하세요</option>
                 <option th:each="club : ${clubs}" th:value="${club.id}" th:text="${club.name}"></option>
             </select>
         </div>

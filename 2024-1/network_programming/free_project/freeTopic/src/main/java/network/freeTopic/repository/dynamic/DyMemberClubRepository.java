@@ -12,4 +12,6 @@ public interface DyMemberClubRepository {
 
     List<MemberClub> findByRole(ClubRole role);
     List<MemberClub> findByClub(Club club);
+
+    MemberClub findMemberClub(Member member, Club club);
 }

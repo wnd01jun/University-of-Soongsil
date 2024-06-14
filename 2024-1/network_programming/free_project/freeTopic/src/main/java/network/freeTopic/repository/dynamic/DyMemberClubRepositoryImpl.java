@@ -3,10 +3,7 @@ package network.freeTopic.repository.dynamic;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import jakarta.persistence.EntityManager;
 import lombok.RequiredArgsConstructor;
-import network.freeTopic.domain.Club;
-import network.freeTopic.domain.Member;
-import network.freeTopic.domain.MemberClub;
-import network.freeTopic.domain.QMemberClub;
+import network.freeTopic.domain.*;
 import network.freeTopic.domain.enums.ClubRole;
 
 import java.util.List;
@@ -41,5 +38,14 @@ public class DyMemberClubRepositoryImpl implements DyMemberClubRepository{
                 .from(memberClub)
                 .where(memberClub.club.eq(club))
                 .fetch();
+    }
+
+    @Override
+    public MemberClub findMemberClub(Member member, Club club) {
+        return queryFactory.select(memberClub)
+                .from(memberClub)
+                .where(memberClub.member.eq(member)
+                , memberClub.club.eq(club))
+                .fetchOne();
     }
 }

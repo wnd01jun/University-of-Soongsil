@@ -11,7 +11,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Category {
+public class Category extends BaseEntity{
     @Id
     @GeneratedValue
     private Long id;
