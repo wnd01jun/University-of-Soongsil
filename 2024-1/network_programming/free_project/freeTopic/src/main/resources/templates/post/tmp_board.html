@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header" />
+<body>
+
+    <table class="table table-striped">
+        <tr>
+            <th class="th">번호</th>
+            <th class="th">제목</th>
+            <th class="th">작성자</th>
+            <th class="th">학번</th>
+            <th class="th">작성일</th>
+        </tr>
+        <tr th:each="post : ${posts}" class = "tr">
+            <td th:text="${post.id}" class="td"></td>
+            <td th:text="${post.title}" class="td"></td>
+            <td th:text="${post.name}" class="td"></td>
+            <td th:text="${post.studentId}" class="td"></td>
+            <td th:text="${post.createdDate}" class="td"></td>
+        </tr>
+    </table>
+
+
+    <div class="container">
+        <div th:replace="fragments/bodyHeader :: bodyHeader"/>
+    <nav style="text-align:center;">
+    <ul class="pagination"
+    th:with="start=${T(java.lang.Math).floor(posts.number/10)*10 + 1},
+    last=(${start + 9 < posts.totalPages ? start + 9 : posts.totalPages})">
+    <th:block th:with="
+    firstAddr=@{/posts(page=1)},
+    prevAddr=@{/posts(page=${posts.number})},
+    nextAddr=@{/posts(page=${posts.number + 2})},
+    lastAddr=@{/posts(page=${posts.totalPages})}">
+    <li>
+        <a th:href="${firstAddr}" aria-label="First">
+        <span aria-hidden="true">First</span>
+        </a>
+        </li>
+    <!-- 이전 페이지로 가기 버튼 -->
+    <li th:class="${posts.first} ? 'disabled'">
+    <a th:href="${posts.first} ? '#' :${prevAddr}"
+    aria-label="Previous">
+    <span aria-hidden="true">&lt;</span>
+    </a>
+    </li>
+    <!--1,2,3,4,.. 등 페이지-->
+    <li th:each="page: ${#numbers.sequence(start, last)}"
+    th:class="${page == posts.number + 1} ? 'active'">
+    <a th:text="${page}" th:href="@{/posts(page=${page})}"></a>
+    </li>
+    <!--다음 페이지로 -->
+    <li th:class="${posts.last} ? 'disabled'">
+    <a th:href="${posts.last} ? '#' : ${nextAddr}"
+    aria-label="Next">
+    <span aria-hidden="true">&gt;</span>
+    </a>
+    </li>
+    <!--맨 마지막 페이지로 이동 -->
+    <li>
+        <a th:href="${lastAddr}" aria-label="Last">
+        <spanaria-hidden="true">Last</span>
+        </a>
+        </li>
+    </th:block>
+    </ul>
+    </nav>
+        <div th:replace="fragments/footer :: footer"/>
+    </div>
+
+
+
+
+</body>
+</html>

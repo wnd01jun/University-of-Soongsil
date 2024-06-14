@@ -1,21 +1,29 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
-<head />
+<head>
+    <title>로그인</title>
+    <meta charset="UTF-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 <style>
     .field-error {
         border-color: #bd2130;
         color : #dc3545;
     }
+    .container {
+        max-width: 560px;
+        margin-top: 50px;
+    }
 </style>
+</head>
 <body>
 
 <div class="container">
 
-
+    <h2 class="mb-4">로그인</h2>
     <form role="form" th:action="@{/login}" th:object="${loginForm}" method="POST">
 
         <div th:if="${#fields.hasErrors()}">
-            <p class="field-error">학번 혹은 아이디 입력 오류입니다.</p>
+            <p class="alert alert-danger">학번 혹은 아이디 입력 오류입니다.</p>
         </div>
 
         <div class="form-group">
@@ -28,7 +36,11 @@
             <label th:for="password">비밀번호</label>
             <input type="password" th:field="*{password}" class="form-control" placeholder="비밀번호를 입력하세요.">
         </div>
-        <button type="submit">로그인</button>
+
+        <div class="d-flex justify-content-end">
+            <button type="submit" class="btn btn-primary mr-2">로그인</button>
+            <button type="button" class="btn btn-secondary" onclick="window.location.href = '/sign-up'">회원가입</button>
+        </div>
     </form>
     <br/>
 

@@ -1,28 +1,31 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <title>메인 페이지</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
 
-<div class="container" th:object ="${member}">
-
-    <div />
-
-    <div class="jumbotron">
-        <h1>선택 화면</h1>
-        <p><div class="lead" th:text="*{name}"></div>님 어서오세요!</p>
+<div class="container" th:object="${member}">
+    <div class="jumbotron mt-5">
+        <h1 class="display-4">선택 화면</h1>
+        <p class="lead" th:text="*{name}"></p>님 어서오세요!
+        <hr class="my-4">
         <p>
-            <a href="/login">게시판 이동</a>
-            <a href="/logout">로그아웃</a>
+            <a href="/posts" class="btn btn-primary btn-lg" role="button">게시판 이동</a>
+            <a href="/posts/myPost" class="btn btn-primary btn-lg" role="button">나의 게시글</a>
+            <a href="/clubs/menu" class="btn btn-primary btn-lg" role="button">동아리 메뉴</a>
+            <a href="/logout" class="btn btn-secondary btn-lg" role="button">로그아웃</a>
         </p>
     </div>
+</div>
 
-    <div>
-
-    </div> <!-- /container -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>

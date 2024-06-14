@@ -24,6 +24,10 @@ public class QPost extends EntityPathBase<Post> {
 
     public final QBaseEntity _super = new QBaseEntity(this);
 
+    public final QClub club;
+
+    public final StringPath content = createString("content");
+
     //inherited
     public final DateTimePath<java.time.LocalDateTime> createdTime = _super.createdTime;
 
@@ -33,8 +37,6 @@ public class QPost extends EntityPathBase<Post> {
 
     //inherited
     public final DateTimePath<java.time.LocalDateTime> modifiedTime = _super.modifiedTime;
-
-    public final StringPath textDetail = createString("textDetail");
 
     public final StringPath title = createString("title");
 
@@ -56,6 +58,7 @@ public class QPost extends EntityPathBase<Post> {
 
     public QPost(Class<? extends Post> type, PathMetadata metadata, PathInits inits) {
         super(type, metadata, inits);
+        this.club = inits.isInitialized("club") ? new QClub(forProperty("club"), inits.get("club")) : null;
         this.member = inits.isInitialized("member") ? new QMember(forProperty("member")) : null;
     }
 

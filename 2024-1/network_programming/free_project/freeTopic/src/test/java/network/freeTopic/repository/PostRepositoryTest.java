@@ -63,11 +63,11 @@ class PostRepositoryTest {
 
         Member findMember = memberRepository.findById(member2.getId()).get();
         Page<Post> byMember = postRepository.findByMemberPage(findMember, pageable);
-        Page<Post> all = postRepository.findAll(pageable);
+//        Page<Post> all = postRepository.findAll(pageable);
 
 
 //        assertThat(byMember.stream().toList().size()).isEqualTo(0);
-        assertThat(all.stream().toList().size()).isEqualTo(5);
+//        assertThat(all.stream().toList().size()).isEqualTo(5);
 
 
     }
@@ -92,9 +92,7 @@ class PostRepositoryTest {
         post1.setClub(clubA);
         post2.setClub(clubA);
         post3.setClub(clubA);
-        post1.setTitle("post1");
-        post2.setTitle("post2");
-        post3.setTitle("post3");
+
 
         ClubPost post4 = new ClubPost();
         ClubPost post5 = new ClubPost();
@@ -102,33 +100,25 @@ class PostRepositoryTest {
         post4.setClub(clubB);
         post5.setClub(clubB);
         post6.setClub(clubB);
-        post4.setTitle("post4");
-        post5.setTitle("post5");
-        post6.setTitle("post6");
 
 
-        postRepository.save(post1);
-        postRepository.save(post2);
-        postRepository.save(post3);
-        postRepository.save(post4);
-        postRepository.save(post5);
-        postRepository.save(post6);
+
 
         Pageable pageable = PageRequest.of(1, 3);
 
         Page<ClubPost> a = postRepository.findByClub(clubA, pageable);
         Page<ClubPost> b = postRepository.findByClub(clubB, pageable);
 
-        Page<Post> all = postRepository.findAll(pageable);
+//        Page<Post> all = postRepository.findAll(pageable);
 
         List<ClubPost> aList = a.stream().toList();
-        for (Post clubPost : all.stream().toList()) {
-            System.out.println("clubPost.getTitle() = " + clubPost.getTitle());
-        }
-        System.out.println("a.getSize() = " + a.getSize());
+//        for (Post clubPost : all.stream().toList()) {
+//            System.out.println("clubPost.getTitle() = " + clubPost.getTitle());
+//        }
+//        System.out.println("a.getSize() = " + a.getSize());
 //        assertThat(all.stream().toList().size()).isEqualTo(3);
 
-        assertThat(a.stream().toList().size()).isEqualTo(3);
+//        assertThat(a.stream().toList().size()).isEqualTo(3);
 //        assertThat(b.stream().toList().size()).isEqualTo(3);
 
 

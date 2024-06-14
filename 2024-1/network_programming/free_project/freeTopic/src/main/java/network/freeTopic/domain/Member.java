@@ -11,6 +11,8 @@ import network.freeTopic.form.RegisterForm;
 @Setter
 @ToString
 @NoArgsConstructor
+@Builder
+@AllArgsConstructor
 public class Member extends BaseEntity{
     @GeneratedValue
     @Id

@@ -24,13 +24,15 @@ public class QJoinRequest extends EntityPathBase<JoinRequest> {
 
     public final QClub club;
 
+    public final StringPath contact = createString("contact");
+
     public final NumberPath<Long> id = createNumber("id", Long.class);
+
+    public final StringPath Introduction = createString("Introduction");
 
     public final EnumPath<network.freeTopic.domain.enums.JoinStatus> joinStatus = createEnum("joinStatus", network.freeTopic.domain.enums.JoinStatus.class);
 
     public final QMember member;
-
-    public final StringPath selfIntroduce = createString("selfIntroduce");
 
     public QJoinRequest(String variable) {
         this(JoinRequest.class, forVariable(variable), INITS);

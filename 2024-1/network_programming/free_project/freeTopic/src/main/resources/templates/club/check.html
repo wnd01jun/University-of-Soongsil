@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>동아리 입부 희망자 확인</title>
+</head>
+
+<body>
+<div class="container mt-5">
+  <h2 class="mb-4">동아리 입부 희망자 확인</h2>
+  <table class="table table-striped table-bordered">
+    <thead class="thead-dark">
+    <tr>
+      <th>신청자</th>
+      <th>신청 동아리</th>
+      <th>자기소개</th>
+      <th>연락처</th>
+      <th>승인/거절</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="applicant : ${applicants}">
+      <td th:text="${applicant.getMember().getName()}">신청자 이름</td>
+      <td th:text="${applicant.club.getName()}">신청한 동아리 이름</td>
+      <td th:text="${applicant.introduction}">자기소개</td>
+      <td th:text="${applicant.contact}">연락처</td>
+      <td>
+        <button class="btn btn-success" th:onclick="'approveApplicant(' + ${applicant.id} + ')'">승인</button>
+        <button class="btn btn-danger" th:onclick="'rejectApplicant(' + ${applicant.id} + ')'">거절</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<script>
+  function approveApplicant(id) {
+    if (confirm('해당 신청을 승인하시겠습니까?')) {
+      // 승인 로직 구현
+      alert('신청이 승인되었습니다.');
+      var form = document.createElement("form");
+      form.setAttribute("method", "post");
+      form.setAttribute("action", "/clubs/" + id + "/accept");
+      document.body.appendChild(form);
+      form.submit();
+      // 이후 서버로 승인 요청을 보내는 코드 추가
+    }
+  }
+
+  function rejectApplicant(id) {
+    if (confirm('해당 신청을 거절하시겠습니까?')) {
+      // 거절 로직 구현
+      alert('신청이 거절되었습니다.');
+      var form = document.createElement("form");
+      form.setAttribute("method", "post");
+      form.setAttribute("action", "/clubs/" + id + "/deny");
+      document.body.appendChild(form);
+      form.submit();
+      // 이후 서버로 거절 요청을 보내는 코드 추가
+    }
+  }
+</script>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

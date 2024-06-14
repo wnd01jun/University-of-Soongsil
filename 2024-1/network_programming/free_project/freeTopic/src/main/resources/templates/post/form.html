@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글쓰기</title>
+</head>
+
+<body>
+<div class="container mt-5">
+    <h2 class="mb-4">글쓰기</h2>
+    <form action="/posts/new" th:action="@{/posts/new}" th:object="${postForm}" method="POST">
+        <div class="form-group">
+            <label for="title">제목</label>
+            <input type="text" id="title" th:value="*{title}" name="title" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="content">내용</label>
+            <textarea id="content" th:value="*{content}" name="content" class="form-control" rows="10" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="club">소속 클럽</label>
+            <select id="club" name="club" class="form-control" th:field="*{club}" required>
+                <option value="" disabled selected>클럽을 선택하세요</option>
+                <option th:each="club : ${clubs}" th:value="${club.id}" th:text="${club.name}"></option>
+            </select>
+        </div>
+        <div class="d-flex justify-content-end">
+            <button type="submit" class="btn btn-primary mr-2">작성하기</button>
+            <button type="button" class="btn btn-secondary" onclick="cancelPost()">취소하기</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    function cancelPost() {
+        if (confirm('정말 취소하시겠습니까? 작성 중인 내용이 사라집니다.')) {
+            window.location.href = '/posts';
+        }
+    }
+</script>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

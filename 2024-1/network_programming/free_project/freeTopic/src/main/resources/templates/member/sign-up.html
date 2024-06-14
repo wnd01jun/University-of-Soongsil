@@ -2,56 +2,62 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <title>회원가입 폼</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .container {
             max-width: 560px;
+            margin-top: 50px;
         }
-        .field-error{
-            border-color : #dc3545;
-            color : #dc3545;
+        .field-error {
+            border-color: #dc3545;
+            color: #dc3545;
         }
     </style>
-    <title>회원가입 폼</title>
 </head>
 <body>
-<div class = "container">
-<div class="signup-form">
-    <h2>회원가입</h2>
-    <form action="/signup" th:action="@{/sign-up}" th:object="${form}" method="POST">
+<div class="container">
+    <div class="signup-form">
+        <h2 class="mb-4">회원가입</h2>
+        <form action="/signup" th:action="@{/sign-up}" th:object="${form}" method="POST">
 
-        <div th:if="${#fields.hasGlobalErrors()}">
-            <p class="field-error" th:each="err : ${#fields.hasGlobalErrors()}"
-               th:text="${err}">글로벌 오류 메시지</p>
-        </div>
+            <div th:if="${#fields.hasGlobalErrors()}">
+                <div class="alert alert-danger" th:each="err : ${#fields.globalErrors()}" th:text="${err}">글로벌 오류 메시지</div>
+            </div>
 
-        <label for="name">이름</label>
-        <input type="text" id="name" th:field="*{name}" name="name" required>
-        <br>
+            <div class="form-group">
+                <label for="name">이름</label>
+                <input type="text" id="name" th:field="*{name}" name="name" class="form-control" required>
+            </div>
 
-        <label for="major">학과</label>
-        <input type="text" id="major" th:field="*{major}" name="major" required
-               th:errorclass="field-error" class = "form-control"
-               placeholder="학과 입력은 필수입니다.">
-        <div class = "field_error" th:errors="*{major}"> 학과 오류</div>
-        <br>
+            <div class="form-group">
+                <label for="major">학과</label>
+                <input type="text" id="major" th:field="*{major}" name="major" class="form-control" required
+                       th:errorclass="field-error" placeholder="학과 입력은 필수입니다.">
+                <div class="field-error" th:errors="*{major}">학과 오류</div>
+            </div>
 
-        <label for="studentId">학번</label>
-        <input type="text" id="studentId" th:field="*{studentId}" name="studentId" required
-        th:errorclass="field-error" class = "form-control"
-        placeholder="학번은 8자리 입니다.">
-        <div class = "field-error" th:errors="*{studentId}"> 학번 오류</div>
-        <br>
+            <div class="form-group">
+                <label for="studentId">학번</label>
+                <input type="text" id="studentId" th:field="*{studentId}" name="studentId" class="form-control" required
+                       th:errorclass="field-error" placeholder="학번은 8자리입니다.">
+                <div class="field-error" th:errors="*{studentId}">학번 오류</div>
+            </div>
 
-        <label for="password">비밀번호</label>
-        <input type="password" id="password" th:field="*{password}" name="password" required
-               th:errorclass="field-error" class = "form-control"
-               placeholder="비밀번호는 6자리 이상, 15자리 이하입니다..">
-        <div class ="field-error" th:errors="*{password}"> 비밀번호 자리 오류</div>
-        <br>
+            <div class="form-group">
+                <label for="password">비밀번호</label>
+                <input type="password" id="password" th:field="*{password}" name="password" class="form-control" required
+                       th:errorclass="field-error" placeholder="비밀번호는 6자리 이상, 15자리 이하입니다.">
+                <div class="field-error" th:errors="*{password}">비밀번호 자리 오류</div>
+            </div>
 
-        <button type="submit">회원가입</button>
-    </form>
+            <button type="submit" class="btn btn-primary btn-block">회원가입</button>
+        </form>
+    </div>
 </div>
-<!--</div>-->
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

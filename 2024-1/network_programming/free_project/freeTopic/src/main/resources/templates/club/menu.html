@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>메인 페이지</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container" th:object="${member}">
+    <div class="jumbotron mt-5">
+        <h1 class="display-4">동아리 페이지</h1>
+        <p class="lead" th:text="*{name}"></p>
+        <hr class="my-4">
+        <p>
+            <a href="/clubs/list" class="btn btn-primary btn-lg" role="button">동아리 조회</a>
+            <a href="/clubs/join" class="btn btn-primary btn-lg" role="button">동아리 가입신청</a>
+            <a href="/clubs/create" class="btn btn-primary btn-lg" role="button">동아리 생성</a>
+            <a href="/clubs/join/check" class="btn btn-primary btn-lg" role="button">가입신청 확인</a>
+            <a href="/" class="btn btn-secondary btn-lg" role="button">메인으로</a>
+        </p>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

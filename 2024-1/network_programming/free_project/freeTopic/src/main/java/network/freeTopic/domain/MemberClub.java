@@ -1,13 +1,15 @@
 package network.freeTopic.domain;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import network.freeTopic.domain.enums.ClubRole;
 
 @Entity
 @Getter
 @Setter
+@NoArgsConstructor
+@Builder
+@AllArgsConstructor
 public class MemberClub extends BaseEntity{
 
     @Id

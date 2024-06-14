@@ -13,12 +13,19 @@ import java.util.List;
 public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(new LogInterceptor())
+                        .order(1)
+                                .addPathPatterns("/**")
+                                        .excludePathPatterns("/static/css/**","/*.ico",
+                                                "/error"
+                );
+
         registry.addInterceptor(new LoginCheckInterceptor())
-                .order(1)
+                .order(2)
                 .addPathPatterns("/**")
                 .excludePathPatterns(
                         "/", "/sign-up", "/login", "/logout"
-                        ,"/css/**", "/*.ico", "/error"
+                        , "/static/css/**", "/*.ico", "/error"
                 ); // 추후 URL 수정 필요
     }
 

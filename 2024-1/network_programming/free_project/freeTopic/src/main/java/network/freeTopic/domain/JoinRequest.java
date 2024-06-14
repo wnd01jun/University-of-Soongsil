@@ -1,8 +1,7 @@
 package network.freeTopic.domain;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import network.freeTopic.domain.enums.JoinStatus;
 
 
@@ -13,6 +12,9 @@ import network.freeTopic.domain.enums.JoinStatus;
 @Entity
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class JoinRequest {
     @Id
     @GeneratedValue
@@ -22,10 +24,12 @@ public class JoinRequest {
     private Member member;
     @ManyToOne(fetch = FetchType.LAZY)
     private Club club;
-    private String selfIntroduce;
+    private String Introduction;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "status")
     private JoinStatus joinStatus;
+
+    private String contact;
 
 }

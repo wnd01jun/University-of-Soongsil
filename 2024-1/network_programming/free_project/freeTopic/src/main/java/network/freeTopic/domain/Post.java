@@ -1,25 +1,30 @@
 package network.freeTopic.domain;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
-@Inheritance(strategy = InheritanceType.JOINED)
 @DiscriminatorColumn
 @Entity
 @Getter
 @Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Post extends BaseEntity{
     @Id
     @GeneratedValue
     private Long id;
 
     private String title;
-    private String textDetail;
+    private String content;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "poster")
+    @JoinColumn(name = "author")
     private Member member;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "club_id")
+    private Club club;
 
 
 }

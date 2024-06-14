@@ -1,6 +1,7 @@
 package network.freeTopic.repository.dynamic;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
+import jakarta.persistence.EntityManager;
 import lombok.RequiredArgsConstructor;
 import network.freeTopic.domain.Club;
 import network.freeTopic.domain.Member;
@@ -12,10 +13,12 @@ import java.util.List;
 
 import static network.freeTopic.domain.QMemberClub.*;
 
-@RequiredArgsConstructor
 public class DyMemberClubRepositoryImpl implements DyMemberClubRepository{
-
     private final JPAQueryFactory queryFactory;
+    public DyMemberClubRepositoryImpl(EntityManager em) {
+        queryFactory = new JPAQueryFactory(em);
+    }
+
     @Override
     public List<MemberClub> findByMember(Member member) {
         return queryFactory.select(memberClub)

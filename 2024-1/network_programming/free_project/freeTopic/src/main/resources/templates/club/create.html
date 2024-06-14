@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동아리 생성</title>
+</head>
+
+<body>
+<div class="container mt-5">
+    <h2 class="mb-4">동아리 생성</h2>
+    <form action="/create-club" th:action="@{/clubs/create}" th:object="${clubCreateForm}" method="POST">
+        <div class="form-group">
+            <label for="name">이름</label>
+            <input type="text" id="name" name="name" th:field="*{name}" class="form-control" placeholder="동아리 이름을 입력하세요" required>
+        </div>
+        <div class="form-group">
+            <label for="description">소개글</label>
+            <textarea id="description" name="description" th:field="*{description}" class="form-control" rows="5" placeholder="동아리 소개글을 입력하세요" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="category">카테고리 선택</label>
+            <select id="category" name="category" class="form-control" th:field="*{category}" size="5" required>
+                <option th:each="category : ${categories}" th:value="${category.id}" th:text="${category.name}"></option>
+            </select>
+        </div>
+        <div class="d-flex justify-content-end">
+            <button type="submit" class="btn btn-primary mr-2">생성하기</button>
+            <button type="button" class="btn btn-secondary" onclick="cancelCreation()">취소하기</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    function cancelCreation() {
+        if (confirm('정말 취소하시겠습니까? 작성 중인 내용이 사라집니다.')) {
+            window.location.href = '/';
+        }
+    }
+</script>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

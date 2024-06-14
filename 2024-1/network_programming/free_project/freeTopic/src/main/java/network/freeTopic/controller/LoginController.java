@@ -60,17 +60,15 @@ public class LoginController {
             log.info("errors = {}", bindingResult.getAllErrors());
             return "/member/loginForm";
         }
+        HttpSession session = request.getSession();
         Member loginMember = loginService.login(loginForm.getLoginId(), loginForm.getPassword());
         log.info("loginMember = {}", loginMember);
 
-        if(loginMember == null || loginMember.getStudentId() == null){
-
+        if(loginMember == null){
             bindingResult.reject("password", null, null);
             log.info("errors = {}", bindingResult.getAllErrors());
             return "/member/loginForm";
         }
-
-        HttpSession session = request.getSession();
         session.setAttribute(SessionConst.LOGIN_MEMBER, loginMember);
         return "redirect:/";
 
@@ -90,7 +88,7 @@ public class LoginController {
         }
         Member member = loginService.register(form);
         if(member == null){
-            bindingResult.reject("duplicate");
+            bindingResult.reject("duplicate", "중복 회원가입 입니다.");
             return "/member/sign-up";
         }
         return "redirect:/";

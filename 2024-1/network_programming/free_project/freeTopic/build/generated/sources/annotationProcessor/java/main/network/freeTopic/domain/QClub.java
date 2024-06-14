@@ -24,8 +24,6 @@ public class QClub extends EntityPathBase<Club> {
 
     public final QBaseEntity _super = new QBaseEntity(this);
 
-    public final QCategory category;
-
     //inherited
     public final DateTimePath<java.time.LocalDateTime> createdTime = _super.createdTime;
 
@@ -33,7 +31,7 @@ public class QClub extends EntityPathBase<Club> {
 
     public final NumberPath<Long> id = createNumber("id", Long.class);
 
-    public final QMember Leader;
+    public final QMember leader;
 
     //inherited
     public final DateTimePath<java.time.LocalDateTime> modifiedTime = _super.modifiedTime;
@@ -58,8 +56,7 @@ public class QClub extends EntityPathBase<Club> {
 
     public QClub(Class<? extends Club> type, PathMetadata metadata, PathInits inits) {
         super(type, metadata, inits);
-        this.category = inits.isInitialized("category") ? new QCategory(forProperty("category")) : null;
-        this.Leader = inits.isInitialized("Leader") ? new QMember(forProperty("Leader")) : null;
+        this.leader = inits.isInitialized("leader") ? new QMember(forProperty("leader")) : null;
     }
 
 }
